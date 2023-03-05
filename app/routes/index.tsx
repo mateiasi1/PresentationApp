@@ -1,3 +1,4 @@
+import Footer from "~/components/footer/footer";
 import Header from "~/components/header/header";
 import EmailButton from "~/components/home/email/emailButton";
 import PresentationText from "~/components/home/presentationText/text";
@@ -14,9 +15,10 @@ export default function Index() {
                         <PresentationText />
                         <EmailButton />
                     </div>
-                    <img src={devImage} alt="..." className="h-full w-2/4" />
+                    <img src={devImage} alt="..." className="" />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
