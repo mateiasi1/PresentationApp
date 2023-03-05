@@ -10,9 +10,14 @@ module.exports = {
             headerGrayColor: "#241c3a",
             customTurquiose: "#3bdbc7",
             buttonText: "#140628",
+            homeTextRadiusColor: "rgba(255,255,255,var(--tw-bg-opacity))",
+            homeTextInsideRadiusColor: "#650ADD",
         },
         fontFamily: {
             manrope: ["Manrope", "roboto"],
+        },
+        borderRadius: {
+            homeTextRadius: "91% 9% 90% 10% / 29% 82% 18% 71%;",
         },
     },
     plugins: [],
