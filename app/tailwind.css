@@ -4,6 +4,11 @@
         @apply font-manrope;
     }
 }
+@layer utilities {
+    .clip-path-home {
+        clip-path: polygon(0% 100%, 100% 0%, 0% 0%) !important;
+    }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
