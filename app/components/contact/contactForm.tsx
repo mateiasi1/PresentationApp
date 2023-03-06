@@ -22,8 +22,11 @@ const ContactForm = () => {
 
     return (
         <div className="flex flex-row justify-center">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg p-5 w-3/4">
-                <form className="w-full max-w-lg">
+            <div
+                className="max-w-sm overflow-hidden shadow-lg p-5 w-3/4 bg-[color:white]"
+                style={{ borderRadius: 20 }}
+            >
+                <form className="w-full max-w-lg ">
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full px-3">
                             <label
