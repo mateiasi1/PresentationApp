@@ -1,6 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import { FC } from "react";
+import CardTechnology from "./cardTechnology";
 
 type Props = {
     title: string;
@@ -8,6 +9,8 @@ type Props = {
     period: string;
     description: string;
     shortDescription: string;
+    logoName: string;
+    technologies: string[];
 };
 const ExperienceCard: FC<Props> = ({
     title,
@@ -15,6 +18,8 @@ const ExperienceCard: FC<Props> = ({
     period,
     description,
     shortDescription,
+    logoName,
+    technologies,
 }) => {
     return (
         <>
@@ -24,19 +29,30 @@ const ExperienceCard: FC<Props> = ({
                         className="text-[color:white] flex flex-col justify-center bg-grayColor p-2"
                         style={{ borderRadius: "20px" }}
                     >
-                        <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                            <span className="font-extrabold text-3xl ">
-                                {title}
-                            </span>
-                            <p className="font-extrabold text-xl pt-2">
-                                {position}
-                            </p>
-                            <p className="font-extrabold text-xl pt-2">
-                                {period}
-                            </p>
-                            <p className="text-sm font-normal pt-2">
-                                {shortDescription}
-                            </p>
+                        <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-5 py-3 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                            <div className="flex flex-col">
+                                <div className="flex flex-col">
+                                    <span className="font-extrabold text-2xl">
+                                        {title}
+                                    </span>
+                                    <div className="flex flex-col ">
+                                        <p className="font-extrabold text-xl">
+                                            {position}
+                                        </p>
+                                        <p className="font-extrabold text-xl pt-2">
+                                            {period}
+                                        </p>
+                                    </div>
+                                    <p className="text-sm font-normal">
+                                        {shortDescription}
+                                    </p>
+                                </div>
+                                <div className="flex flex-row justify-start flex-wrap gap-2 pt-5 ">
+                                    {technologies.map((item) => (
+                                        <CardTechnology technologyName={item} />
+                                    ))}
+                                </div>
+                            </div>
                             <ChevronUpIcon
                                 className={`${
                                     open ? "rotate-180 transform" : ""
@@ -44,7 +60,16 @@ const ExperienceCard: FC<Props> = ({
                             />
                         </Disclosure.Button>
                         <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                            {description}
+                            <div>
+                                <div className="flex flex-row justify-center pb-2">
+                                    <div className=" w-[200px]">
+                                        {logoName && (
+                                            <img src={logoName} alt={title} />
+                                        )}
+                                    </div>
+                                </div>
+                                {description}
+                            </div>
                         </Disclosure.Panel>
                     </div>
                 )}
