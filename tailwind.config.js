@@ -7,7 +7,7 @@ module.exports = {
             gradientBackground: "#331143",
             gradientBgFrom: "#6B0BEA",
             gradientBgTo: "#3E067F",
-            headerGrayColor: "#241c3a",
+            grayColor: "#241c3a",
             customTurquiose: "#3bdbc7",
             buttonText: "#140628",
             homeTextRadiusColor: "rgba(255,255,255,var(--tw-bg-opacity))",

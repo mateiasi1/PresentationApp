@@ -2,7 +2,7 @@ import AboutMe from "./aboutMe";
 
 const Header = () => {
     return (
-        <nav className="relative flex items-center justify-between flex-wrap text-[color:white] bg-headerGrayColor p-6">
+        <nav className="relative flex items-center justify-between flex-wrap text-[color:white] bg-grayColor p-6">
             <div className="flex items-center flex-shrink-0 text-white mr-6">
                 <a href="/" className="flex flex-row items-center">
                     <svg
